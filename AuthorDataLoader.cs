@@ -18,7 +18,4 @@ public class AuthorDataLoader : BatchDataLoader<int, AuthorModel>
     }
 }
 
-public record AuthorModel(int Id, string Name, string Bio)
-{
-    public Author ToAuthor() => new(Id, Name, Bio);
-}
+public record AuthorModel(int Id, string Name, string Bio);

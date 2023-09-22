@@ -2,18 +2,16 @@ namespace DataProviderDemo;
 
 public class Author
 {
-    public Author(int id, string name, string bio)
+    public Author(int id)
     {
         Id = id;
-        Name = name;
-        Bio = bio;
     }
 
     public int Id { get; }
 
-    public string Name { get; }
+    public async Task<string> GetNameAsync(AuthorDataLoader authorDataLoader) => (await authorDataLoader.LoadAsync(Id)).Name;
 
-    public string Bio { get; }
+    public async Task<string> GetBioAsync(AuthorDataLoader authorDataLoader) => (await authorDataLoader.LoadAsync(Id)).Bio;
 
     [UsePaging]
     public async Task<IEnumerable<Book>> GetBooksAsync(BooksByAuthorDataLoader booksByAuthorDataLoader)

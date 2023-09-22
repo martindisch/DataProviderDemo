@@ -13,11 +13,7 @@ public class Book
 
     public string Title { get; }
 
-    public async Task<Author> GetAuthorAsync(AuthorDataLoader authorDataLoader)
-    {
-        var authorModel = await authorDataLoader.LoadAsync(AuthorId);
-        return authorModel.ToAuthor();
-    }
+    public Author GetAuthor() => new(AuthorId);
 
     internal int AuthorId { get; }
 }
