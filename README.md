@@ -181,15 +181,17 @@ wherever we want to in the schema (for example on `Book.author` to link back),
 since we no longer have to load anything and can simply instantiate the object
 with its ID.
 
-While there are some nice advantages to the pattern, we're wondering about the
-downsides. Is it ergonomic to have lots of resolvers like `(await
-authorDataLoader.LoadAsync(Id)).Name` instead of simple instance properties?
-Does this scale performance-wise when we have hundreds of such fields returned
-in a single response or does it lead to massive instruction bloat due to the
-number of async state machines generated?
+While there are some nice advantages to the pattern, we've been wondering how
+this would scale when we have hundreds of such fields returned in a single
+response, for example if it would lead to massive instruction bloat due to the
+number of async state machines generated. We've done a small
+[benchmark](./src/Benchmark/README.md) to learn more about that.
 
-We'll do a benchmark to determine that last point, but are interested in
-general perspectives and advice on how to deal with such a situation.
+More broadly we'd like to know if this is the way to go, or if there are any
+other approaches when it comes to exposing a large number of fields where
+subsets of them have to be loaded together, while ensuring the most optimal
+loading behavior (in parallel where possible) for the largest number of
+possible queries.
 
 ## License
 
