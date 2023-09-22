@@ -72,3 +72,10 @@ query dataProduct {
 | -------- | ---------: | -------: | ------: |
 | Preload  |   173.3 us |  0.90 us | 0.80 us |
 | OnDemand | 1,386.3 us | 10.44 us | 9.25 us |
+
+### 10 products (= 990 fields)
+
+| Method   |       Mean |    Error |   StdDev |
+| -------- | ---------: | -------: | -------: |
+| Preload  |   274.2 us |  3.56 us |  3.16 us |
+| OnDemand | 2,707.1 us | 11.38 us | 10.09 us |

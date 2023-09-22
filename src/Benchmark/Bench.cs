@@ -125,6 +125,21 @@ public class Bench
           product05: dataProductById(id: "RGF0YVByb2R1Y3QKaTU=") {
             ...EverythingDataProduct
           }
+          product06: dataProductById(id: "RGF0YVByb2R1Y3QKaTY=") {
+            ...EverythingDataProduct
+          }
+          product07: dataProductById(id: "RGF0YVByb2R1Y3QKaTc=") {
+            ...EverythingDataProduct
+          }
+          product08: dataProductById(id: "RGF0YVByb2R1Y3QKaTg=") {
+            ...EverythingDataProduct
+          }
+          product09: dataProductById(id: "RGF0YVByb2R1Y3QKaTk=") {
+            ...EverythingDataProduct
+          }
+          product10: dataProductById(id: "RGF0YVByb2R1Y3QKaTEw") {
+            ...EverythingDataProduct
+          }
         }
         """));
 
@@ -247,6 +262,21 @@ public class Bench
           ...EverythingLazyProduct
         }
         product05: lazyProductById(id: "TGF6eVByb2R1Y3QKaTU=") {
+          ...EverythingLazyProduct
+        }
+        product06: lazyProductById(id: "TGF6eVByb2R1Y3QKaTY=") {
+          ...EverythingLazyProduct
+        }
+        product07: lazyProductById(id: "TGF6eVByb2R1Y3QKaTc=") {
+          ...EverythingLazyProduct
+        }
+        product08: lazyProductById(id: "TGF6eVByb2R1Y3QKaTg=") {
+          ...EverythingLazyProduct
+        }
+        product09: lazyProductById(id: "TGF6eVByb2R1Y3QKaTk=") {
+          ...EverythingLazyProduct
+        }
+        product10: lazyProductById(id: "TGF6eVByb2R1Y3QKaTEw") {
           ...EverythingLazyProduct
         }
       }
