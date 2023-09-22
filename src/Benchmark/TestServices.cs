@@ -1,4 +1,4 @@
-using DataProviderDemo;
+using BenchmarkGraph;
 using HotChocolate;
 using HotChocolate.Execution;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +11,7 @@ public class TestServices
     {
         Services = new ServiceCollection()
             .AddGraphQLServer()
-            .AddDemo()
+            .AddBenchmarkGraph()
             .Services
             .AddSingleton(sp => new RequestExecutorProxy(sp.GetRequiredService<IRequestExecutorResolver>(), Schema.DefaultName))
             .BuildServiceProvider();

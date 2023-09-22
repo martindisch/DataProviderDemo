@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderDemo", "src\Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "src\Benchmark\Benchmark.csproj", "{765F0E68-33A2-4DFC-9990-FEA6CF9D538D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkGraph", "src\BenchmarkGraph\BenchmarkGraph.csproj", "{E2F1DBE4-570B-4064-A97E-2F5132DE6A08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{765F0E68-33A2-4DFC-9990-FEA6CF9D538D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{765F0E68-33A2-4DFC-9990-FEA6CF9D538D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{765F0E68-33A2-4DFC-9990-FEA6CF9D538D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F1DBE4-570B-4064-A97E-2F5132DE6A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F1DBE4-570B-4064-A97E-2F5132DE6A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F1DBE4-570B-4064-A97E-2F5132DE6A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F1DBE4-570B-4064-A97E-2F5132DE6A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

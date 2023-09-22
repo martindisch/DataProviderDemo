@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../DataProviderDemo/DataProviderDemo.csproj" />
+        <ProjectReference Include="../BenchmarkGraph/BenchmarkGraph.csproj" />
     </ItemGroup>
 
     <ItemGroup>
