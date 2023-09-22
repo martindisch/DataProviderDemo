@@ -8,11 +8,13 @@ public class AuthorDataLoader : BatchDataLoader<int, AuthorModel>
 
     protected override async Task<IReadOnlyDictionary<int, AuthorModel>> LoadBatchAsync(IReadOnlyList<int> keys, CancellationToken cancellationToken)
     {
+        await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
+
         var authorsById = keys
             .Select(id => new AuthorModel(id, $"Author {id}", $"Author {id} lived a long and happy life."))
             .ToDictionary(authorModel => authorModel.Id);
 
-        return await Task.FromResult(authorsById);
+        return authorsById;
     }
 }
 
