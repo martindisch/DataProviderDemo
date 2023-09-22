@@ -2,5 +2,10 @@ namespace DataProviderDemo;
 
 public class Query
 {
-    public string GetHello() => "Hello, world!";
+    [NodeResolver]
+    public async Task<Author> GetAuthorByIdAsync(int id, AuthorDataLoader authorDataLoader)
+    {
+        var authorModel = await authorDataLoader.LoadAsync(id);
+        return authorModel.ToAuthor();
+    }
 }
